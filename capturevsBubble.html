@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">parent
+        <button id="child">child</button>
+    </div>
+    <script>
+        var btnadd=document.querySelector("#child");
+
+        var x=btnadd.addEventListener("click",function(){
+          
+            console.log("child")
+        })
+
+         var divadd=document.querySelector("#parent");
+
+        var y=divadd.addEventListener("click",function(){
+           
+            console.log("parent")
+
+        })
+    </script>
+</body>
+</html>

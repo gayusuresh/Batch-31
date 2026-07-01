@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnadd">click</button>
+    <p id="demo">This is my para</p>
+    <input type="text" id="input">
+    <script>
+     
+    btnadd.addEventListener("click",function(e){
+        alert("clicking")
+        console.log(e.type)
+    })
+     demo.addEventListener("mousedown",function(e){
+        alert("pressed")
+        console.log(e.type)
+    }) 
+    input.addEventListener("keyup",function(e){
+        alert("release")
+        console.log(e.type)
+    })
+
+        </script>
+
+</body>
+</html>
