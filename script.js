@@ -1,16 +1,16 @@
-function Validate()
-{
-    var x = document.forms.myform.username.value;
-    var y = document.forms.myform.pwd.value;
-    if (x == "" || x == null)
-    {
-        alert("Name cannot be blank");
-        return false;
-    }
-    if (y=="" || y.length < 6)
-    {
-     alert("pwd must be atleast 6 and above ");
-     return false;
-    }
-    true;
-}
+var url = "https://jsonplaceholder.typicode.com/users";
+var result = "";
+fetch(url)
+  .then((response) => response.json()) 
+    .then((data) => {
+      
+        for (let i = 0; i < data.length; i++)
+        {
+          result += "<tr><td>" + data[i].username + "</td> "+"<td>" +data[i].email +"</td></tr>";
+        }
+        document.getElementById("tabledata").innerHTML ="<h1 style='text-align:center'>UserInformation</h1>"+ result;
+        console.log(data)
+  })
+  .catch((error) => {
+    console.log(error);
+  });
